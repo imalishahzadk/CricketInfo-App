@@ -1,0 +1,50 @@
+extends layout 
+block content 
+    br
+    h5 Current Series
+    br
+    div(class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4")
+        each series, i in seriesList 
+            div(class="col")
+                div(class="card text-center")
+                    div(class="card-body")
+                        h5(class="card-title")= series.name
+                        br
+                        span(class="badge bg-primary rounded-pill")= series.sdate
+                        span   -  
+                        span(class="badge bg-primary rounded-pill")= series.edate
+                        br
+                        br
+                        span(class="card-text")= series.odi
+                        span(class="card-text")  (ODI), 
+                        span(class="card-text")= series.t20
+                        span(class="card-text")  (T20), 
+                        span(class="card-text")= series.test
+                        span(class="card-text")  (Test)
+                        //- p(class="card-text") This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        //- div(class="card text-center")
+        //-     div(class="card-header")= match.name
+        //-     div(class="card-body")
+        //-         h5(class="card-title")= match.status
+        //-         ol(class="list-group list-group-horizontal d-flex justify-content-center")
+        //-             li(class="list-group-item d-flex justify-content-center align-items-start")
+        //-                 div(class="ms-2 me-auto")
+        //-                     div(class="fw-bold")= match.t1inning
+        //-                     span= match.t1runs
+        //-                     span /
+        //-                     span= match.t1wickets
+        //-                     span (
+        //-                     span= match.t1overs
+        //-                     span )
+        //-             li(class="list-group-item d-flex justify-content-center align-items-start")
+        //-                 div(class="ms-2 me-auto")
+        //-                     div(class="fw-bold")= match.t2inning
+        //-                     span= match.t2runs
+        //-                     span /
+        //-                     span= match.t2wickets
+        //-                     span (
+        //-                     span= match.t2overs
+        //-                     span )
+        //-         span(class="badge bg-primary rounded-pill")= match.date
+        //-     div(class="card-footer text-muted")=match.venue
+        br

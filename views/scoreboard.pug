@@ -1,0 +1,32 @@
+extends layout 
+block content 
+    br
+    h5 Current Matches
+    br
+    each match, i in matches
+        div(class="card text-center")
+            div(class="card-header")= match.name
+            div(class="card-body")
+                h5(class="card-title")= match.status
+                ol(class="list-group list-group-horizontal d-flex justify-content-center")
+                    li(class="list-group-item d-flex justify-content-center align-items-start")
+                        div(class="ms-2 me-auto")
+                            div(class="fw-bold")= match.t1inning
+                            span= match.t1runs
+                            span /
+                            span= match.t1wickets
+                            span (
+                            span= match.t1overs
+                            span )
+                    li(class="list-group-item d-flex justify-content-center align-items-start")
+                        div(class="ms-2 me-auto")
+                            div(class="fw-bold")= match.t2inning
+                            span= match.t2runs
+                            span /
+                            span= match.t2wickets
+                            span (
+                            span= match.t2overs
+                            span )
+                span(class="badge bg-primary rounded-pill")= match.date
+            div(class="card-footer text-muted")=match.venue
+        br

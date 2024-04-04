@@ -1,0 +1,28 @@
+extends layout 
+block content 
+    br
+    h5 Player Info
+    br
+    div(class="card mb-3")
+        div(class="card-body")
+            h4(class="card-title") #{name}
+            p(class="card-text") 
+                ul(class="list-group list-group-flush")
+                    li(class="list-group-item")
+                        b Date of Birth:    
+                        span #{dob}
+                    li(class="list-group-item")
+                        b Role:             
+                        span #{role}
+                    li(class="list-group-item")
+                        b Batting Style:    
+                        span #{bat}
+                    li(class="list-group-item")
+                        b Bowling Style:    
+                        span #{bowl}
+                    li(class="list-group-item")
+                        b Place of Birth:   
+                        span #{pob}
+                    li(class="list-group-item")
+                        b Country:          
+                        span #{country}
